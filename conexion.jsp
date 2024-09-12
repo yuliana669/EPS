@@ -8,12 +8,17 @@
     try {
         // Cargar el controlador JDBC
         Class.forName("org.postgresql.Driver");
-        
+
         // Establecer la conexión
         conexion = DriverManager.getConnection(url, usuario, contrasena);
+
+        // Guardar la conexión en el contexto de la aplicación
+        application.setAttribute("conexion", conexion);
+
     } catch (ClassNotFoundException e) {
         out.println("Error al cargar el controlador JDBC: " + e.getMessage());
     } catch (SQLException e) {
         out.println("Error en la conexión a la base de datos: " + e.getMessage());
     }
 %>
+

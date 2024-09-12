@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.sql.Connection, java.sql.PreparedStatement, java.sql.SQLException" %>
 <%@ include file="conexion.jsp" %>
 
@@ -54,8 +55,9 @@
             <div class="mb-3">
                 <label for="rol" class="form-label">Rol:</label>
                 <select id="rol" name="rol" class="form-select" required>
-                    <option value="cliente">Cliente</option>
-                    <option value="admin">Administrador</option>
+                    <option value="cliente">Paciente</option>
+                    <option value="admin">Admin</option>
+                    <option value="medico">Médico</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Registrar</button>
