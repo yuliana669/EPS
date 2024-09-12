@@ -16,6 +16,7 @@ ENV PATH=$JAVA_HOME/bin:$PATH
 
 # Descargar e instalar Tomcat 9.0.94
 RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.94/bin/apache-tomcat-9.0.94.tar.gz && \
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     tar -xvzf apache-tomcat-9.0.95.tar.gz && \
     mv apache-tomcat-9.0.95 /usr/local/tomcat && \
@@ -25,6 +26,11 @@ RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.94/bin/apache-tomcat-9
     mv apache-tomcat-9.0.94 /usr/local/tomcat && \
     rm apache-tomcat-9.0.94.tar.gz
 >>>>>>> 06cb1a41dcf0842b0634bd5388a67cc0d00f9da3
+=======
+    tar -xvzf apache-tomcat-9.0.94.tar.gz && \
+    mv apache-tomcat-9.0.94 /usr/local/tomcat && \
+    rm apache-tomcat-9.0.94.tar.gz
+>>>>>>> Stashed changes
 
 # Copia tu proyecto al directorio de webapps de Tomcat
 COPY ./ /usr/local/tomcat/webapps/
